@@ -26,7 +26,7 @@ Importez/ouvrez votre projet local dans l'IDE de votre choix supportant Maven (l
 Modifiez le fichier README pour qu’il contienne vos nom, prénom et groupe en place des données exemples.  
 Commitez et pushez  dans votre dépôt distant en utilisant le message de commit suivant :
 
-> fix #0 Activité préliminaire terminée
+> git
 
 Dans la suite de ce document, à chaque fois que vous trouverez un énoncé commençant par “fix #...”, vous devez committer et pusher les modifications sur votre dépôt distant en utilisant comme message de commit cet énoncé.
 
