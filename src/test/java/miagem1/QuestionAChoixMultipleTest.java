@@ -17,7 +17,7 @@ public class QuestionAChoixMultipleTest {
         List<Integer> bonneReponses = new ArrayList<Integer>();
         bonneReponses.add(1);
         bonneReponses.add(3);
-        uneQuestion = new QuestionAChoixMultiple("un énoncé", bonneReponses);
+        uneQuestion = new QuestionAChoixMultiple("un énoncé", bonneReponses, 4);
     }
 
     @Test
@@ -28,6 +28,14 @@ public class QuestionAChoixMultipleTest {
         assertNotNull(resEnonce);
         //and : l'énoncé est bien celui fournit à la construction
         assertEquals(resEnonce, "un énoncé");
+    }
+
+    @Test
+    public void testGetNombreDeReponses(){
+        //when : on demande le nombre de réponse à la question
+        int resNb = uneQuestion.getNombreDeReponses();
+        //then : le nombre de response est celui fournit à la construction
+        assertEquals(resNb, 4);
     }
 
     @Test
@@ -42,7 +50,7 @@ public class QuestionAChoixMultipleTest {
         indice = 2;
         //and : on demande le calcul du score
         resScore = uneQuestion.getScoreForIndice(indice);
-        //then : le score est bien à 0
-        assertEquals(new Float(0f), resScore);
+        //then : le score est bien à -50
+        assertEquals(new Float(-50f), resScore);
     }
 }
